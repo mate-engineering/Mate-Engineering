@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Mate Engineering</title>
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+    
+    <script src="js/theme.js"></script>
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="assets/logo.png" alt="Mate Engineering Logo">
+        </div>
+        <nav>
+            <a onclick="document.querySelector('#home').scrollIntoView({behavior: 'smooth'})">Home</a>
+            <a onclick="document.querySelector('#servicii').scrollIntoView({behavior: 'smooth'})">Servicii</a>
+            <a onclick="document.querySelector('#despre').scrollIntoView({behavior: 'smooth'})">Despre</a>
+            <a onclick="document.querySelector('#projects').scrollIntoView({behavior: 'smooth'})">Proiecte</a>
+            <a onclick="document.querySelector('#contact').scrollIntoView({behavior: 'smooth'})">Contact</a>
+        </nav>
+        <button id="theme-toggle" aria-label="Schimbă tema"></button>
+    </header>
+
+    <div class="snap-container">
+        <section id="home">
+            <div class="watermark">MATE<br>ENGINEERING</div>
+            <div class="hero-layout">
+                <div id="canvas-container"></div>
+                <div class="content reveal">
+                    <h1>
+                        Mate
+                        <span class="outline">Engineering</span>
+                    </h1>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tempor dignissim magna quis aliquam. Curabitur quis condimentum diam, sed pulvinar nunc. Integer lorem nibh, ornare dictum mauris at, aliquam ornare nibh. Maecenas suscipit eros at elit feugiat, nec sodales dui tincidunt. In convallis imperdiet finibus. Nam volutpat, lectus tincidunt euismod elementum, sem libero luctus diam, non ornare lacus urna eu odio. Suspendisse nisi lectus, rutrum et malesuada interdum, volutpat vel ligula. Fusce lobortis dignissim arcu, interdum ullamcorper erat ultrices quis. Cras diam mi, posuere eget felis ut, auctor tempor augue. Nunc non rutrum quam. Duis sed bibendum metus. Ut malesuada magna nulla, sed porttitor massa dapibus eget. Integer vel justo dui. Nam mollis ipsum justo, id fringilla elit facilisis eget. Fusce ultricies dui ut lacinia dignissim. Maecenas eget elit pellentesque, aliquam orci ut, venenatis mi. </p>
+                    <button onclick="document.getElementById('servicii').scrollIntoView({behavior: 'smooth'})">
+                        Descoperă Serviciile
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="servicii">
+            <div class="watermark">Servicii</div>
+            <h2 class="reveal section-title">Servicii de Inginerie</h2>
+            <div class="services-grid" id="servicii-grid"></div>
+        </section>
+
+        <section id="despre">
+            <div class="watermark">Despre Noi</div>
+            <div class="despre-container">
+                <div class="despre-content reveal">
+                    <h2 class="section-title">Despre Noi</h2>
+                    <p class="despre-text" id="descriere-firma">
+                        Suntem o echipă de ingineri pasionați, dedicați inovației și 
+                        excelenței tehnice. Cu peste 10 ani de experiență în industrie, 
+                        oferim soluții personalizate pentru provocări tehnice complexe.
+                    </p>
+                </div>
+                
+                <div class="despre-image reveal">
+                    <img src="assets/about/team.png" alt="Echipa Mate Engineering" loading="lazy">
+                </div>
+            </div>
+            
+            <div class="team-section">
+                <h3 class="team-title reveal">Echipa Noastră</h3>
+                <div class="team-grid" id="team-grid"></div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="watermark">Proiecte</div>
+            <h2 class="reveal section-title">Proiecte Realizate</h2>
+            <div class="projects-container" id="grid"></div>
+            <div class="pagination-controls" id="pagination"></div>
+        </section>
+        <section id="contact">
+            <div class="watermark">Contact</div>
+            
+            <div class="engineering-contact-wrap">
+                <div class="contact-header-block">
+                    <h2 class="giant-title">
+                        GET IN 
+                        <span class="outline">TOUCH</span>
+                    </h2>
+                </div>
+
+                <div class="blueprint-grid">
+                    <div class="info-node reveal">
+                        <div class="node-content">
+                            <label>Locație Sediu</label>
+                            <p id="contact-adresa">Strada Ingineriei 123, București</p>
+                        </div>
+                    </div>
+
+                    <div class="info-node reveal">
+                        <div class="node-content">
+                            <label>Canal Email</label>
+                            <p id="contact-email">office@mate-engineering.ro</p>
+                        </div>
+                    </div>
+
+                    <div class="info-node reveal">
+                        <div class="node-content">
+                            <label>Linie Telefonică</label>
+                            <p id="contact-telefon">+40 123 456 789</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="social-tech-bar" id="social-links">
+                    <a href="#" target="_blank" rel="noopener">
+                        <i class="fab fa-linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="#" target="_blank" rel="noopener">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="#" target="_blank" rel="noopener">
+                        <i class="fab fa-behance"></i>
+                        <span>Behance</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script type="module" src="js/3d-model.js"></script>
+    <script src="js/main.js"></script>
+    
+    <script>
+      
+        document.addEventListener('DOMContentLoaded', function() {
+            const snapContainer = document.querySelector('.snap-container');
+            if (snapContainer) {
+                snapContainer.style.webkitOverflowScrolling = 'touch';
+            }
+            
+            document.querySelectorAll('nav a').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('onclick').match(/'([^']+)'/)[1];
+                    const targetSection = document.querySelector(targetId);
+                    if (targetSection) {
+                        targetSection.scrollIntoView({ 
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
