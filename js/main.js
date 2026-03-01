@@ -194,3 +194,29 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 window.addEventListener('load', loadContact);
+document.addEventListener('DOMContentLoaded', function () {
+    if (window.innerWidth <= 767) {
+        const navbar = document.getElementById('mobile-nav') || document.querySelector('nav');
+        const navbarHeight = navbar ? navbar.offsetHeight : 60;
+
+        const style = document.createElement('style');
+        style.innerHTML = `
+                section#contact {
+                    padding-bottom: ${navbarHeight + 30}px !important;
+                }
+            `;
+        document.head.appendChild(style);
+    }
+});
+
+window.addEventListener('resize', function () {
+    if (window.innerWidth <= 767) {
+        const navbar = document.getElementById('mobile-nav') || document.querySelector('nav');
+        const navbarHeight = navbar ? navbar.offsetHeight : 60;
+
+        const contactSection = document.getElementById('contact');
+        if (contactSection) {
+            contactSection.style.paddingBottom = (navbarHeight + 30) + 'px';
+        }
+    }
+});
