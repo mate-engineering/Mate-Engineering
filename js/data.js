@@ -39,7 +39,76 @@ const proiecteDate = [
         an: "2023",
         galerie: ["assets/projects/gallerylocuintesociale/locuintesociale.png"]
     },
-   
+    {
+        id: 5,
+        titlu: "Bloc Locuințe Sociale 2",
+        cat: "Rezidențial",
+        img: "assets/projects/locuintesociale.png",
+        descriere: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tempor dignissim magna quis aliquam. Curabitur quis condimentum diam, sed pulvinar nunc. Integer lorem nibh, ornare dictum mauris at, aliquam ornare nibh. Maecenas suscipit eros at elit feugiat, nec sodales dui tincidunt. In convallis imperdiet finibus. Nam volutpat, lectus tincidunt euismod elementum, sem libero luctus diam, non ornare lacus urna eu odio. Suspendisse nisi lectus, rutrum et malesuada interdum, volutpat vel ligula. Fusce lobortis dignissim arcu, interdum ullamcorper erat ultrices quis. Cras diam mi, posuere eget felis ut, auctor tempor augue. Nunc non rutrum quam. Duis sed bibendum metus. Ut malesuada magna nulla, sed porttitor massa dapibus eget. Integer vel justo dui. Nam mollis ipsum justo, id fringilla elit facilisis eget. Fusce ultricies dui ut lacinia dignissim. Maecenas eget elit pellentesque, aliquam orci ut, venenatis mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tempor dignissim magna quis aliquam. Curabitur quis condimentum diam, sed pulvinar nunc. Integer lorem nibh, ornare dictum mauris at, aliquam ornare nibh. Maecenas suscipit eros at elit feugiat, nec sodales dui tincidunt. In convallis imperdiet finibus. Nam volutpat, lectus tincidunt euismod elementum, sem libero luctus diam, non ornare lacus urna eu odio. Suspendisse nisi lectus, rutrum et malesuada interdum, volutpat vel ligula. Fusce lobortis dignissim arcu, interdum ullamcorper erat ultrices quis. Cras diam mi, posuere eget felis ut, auctor tempor augue. Nunc non rutrum quam. Duis sed bibendum metus. Ut malesuada magna nulla, sed porttitor massa dapibus eget. Integer vel justo dui. Nam mollis ipsum justo, id fringilla elit facilisis eget. Fusce ultricies dui ut lacinia dignissim. Maecenas eget elit pellentesque, aliquam orci ut, venenatis mi. ",
+        locatie: "Prahova",
+        an: "2023",
+        galerie: ["assets/projects/gallerylocuintesociale/locuintesociale.png"]
+    },
+    {
+        id: 6,
+        titlu: "Bloc Locuințe Sociale 3",
+        cat: "Rezidențial",
+        img: "assets/projects/locuintesociale.png",
+        descriere: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tempor dignissim magna quis aliquam. Curabitur quis condimentum diam, sed pulvinar nunc. Integer lorem nibh, ornare dictum mauris at, aliquam ornare nibh. Maecenas suscipit eros at elit feugiat, nec sodales dui tincidunt. In convallis imperdiet finibus. Nam volutpat, lectus tincidunt euismod elementum, sem libero luctus diam, non ornare lacus urna eu odio. Suspendisse nisi lectus, rutrum et malesuada interdum, volutpat vel ligula. Fusce lobortis dignissim arcu, interdum ullamcorper erat ultrices quis. Cras diam mi, posuere eget felis ut, auctor tempor augue. Nunc non rutrum quam. Duis sed bibendum metus. Ut malesuada magna nulla, sed porttitor massa dapibus eget. Integer vel justo dui. Nam mollis ipsum justo, id fringilla elit facilisis eget. Fusce ultricies dui ut lacinia dignissim. Maecenas eget elit pellentesque, aliquam orci ut, venenatis mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tempor dignissim magna quis aliquam. Curabitur quis condimentum diam, sed pulvinar nunc. Integer lorem nibh, ornare dictum mauris at, aliquam ornare nibh. Maecenas suscipit eros at elit feugiat, nec sodales dui tincidunt. In convallis imperdiet finibus. Nam volutpat, lectus tincidunt euismod elementum, sem libero luctus diam, non ornare lacus urna eu odio. Suspendisse nisi lectus, rutrum et malesuada interdum, volutpat vel ligula. Fusce lobortis dignissim arcu, interdum ullamcorper erat ultrices quis. Cras diam mi, posuere eget felis ut, auctor tempor augue. Nunc non rutrum quam. Duis sed bibendum metus. Ut malesuada magna nulla, sed porttitor massa dapibus eget. Integer vel justo dui. Nam mollis ipsum justo, id fringilla elit facilisis eget. Fusce ultricies dui ut lacinia dignissim. Maecenas eget elit pellentesque, aliquam orci ut, venenatis mi. ",
+        locatie: "Prahova",
+        an: "2023",
+        galerie: ["assets/projects/gallerylocuintesociale/locuintesociale.png"]
+    },
+    {
+        id: 7,
+        titlu: "Bloc Locuințe Sociale 4",
+        cat: "Rezidențial",
+        img: "assets/projects/locuintesociale.png",
+        descriere: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tempor dignissim magna quis aliquam. Curabitur quis condimentum diam, sed pulvinar nunc. Integer lorem nibh, ornare dictum mauris at, aliquam ornare nibh. Maecenas suscipit eros at elit feugiat, nec sodales dui tincidunt. In convallis imperdiet finibus. Nam volutpat, lectus tincidunt euismod elementum, sem libero luctus diam, non ornare lacus urna eu odio. Suspendisse nisi lectus, rutrum et malesuada interdum, volutpat vel ligula. Fusce lobortis dignissim arcu, interdum ullamcorper erat ultrices quis. Cras diam mi, posuere eget felis ut, auctor tempor augue. Nunc non rutrum quam. Duis sed bibendum metus. Ut malesuada magna nulla, sed porttitor massa dapibus eget. Integer vel justo dui. Nam mollis ipsum justo, id fringilla elit facilisis eget. Fusce ultricies dui ut lacinia dignissim. Maecenas eget elit pellentesque, aliquam orci ut, venenatis mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tempor dignissim magna quis aliquam. Curabitur quis condimentum diam, sed pulvinar nunc. Integer lorem nibh, ornare dictum mauris at, aliquam ornare nibh. Maecenas suscipit eros at elit feugiat, nec sodales dui tincidunt. In convallis imperdiet finibus. Nam volutpat, lectus tincidunt euismod elementum, sem libero luctus diam, non ornare lacus urna eu odio. Suspendisse nisi lectus, rutrum et malesuada interdum, volutpat vel ligula. Fusce lobortis dignissim arcu, interdum ullamcorper erat ultrices quis. Cras diam mi, posuere eget felis ut, auctor tempor augue. Nunc non rutrum quam. Duis sed bibendum metus. Ut malesuada magna nulla, sed porttitor massa dapibus eget. Integer vel justo dui. Nam mollis ipsum justo, id fringilla elit facilisis eget. Fusce ultricies dui ut lacinia dignissim. Maecenas eget elit pellentesque, aliquam orci ut, venenatis mi. ",
+        locatie: "Prahova",
+        an: "2023",
+        galerie: ["assets/projects/gallerylocuintesociale/locuintesociale.png"]
+    },
+    {
+        id: 8,
+        titlu: "Bloc Locuințe Sociale 5",
+        cat: "Rezidențial",
+        img: "assets/projects/locuintesociale.png",
+        descriere: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tempor dignissim magna quis aliquam. Curabitur quis condimentum diam, sed pulvinar nunc. Integer lorem nibh, ornare dictum mauris at, aliquam ornare nibh. Maecenas suscipit eros at elit feugiat, nec sodales dui tincidunt. In convallis imperdiet finibus. Nam volutpat, lectus tincidunt euismod elementum, sem libero luctus diam, non ornare lacus urna eu odio. Suspendisse nisi lectus, rutrum et malesuada interdum, volutpat vel ligula. Fusce lobortis dignissim arcu, interdum ullamcorper erat ultrices quis. Cras diam mi, posuere eget felis ut, auctor tempor augue. Nunc non rutrum quam. Duis sed bibendum metus. Ut malesuada magna nulla, sed porttitor massa dapibus eget. Integer vel justo dui. Nam mollis ipsum justo, id fringilla elit facilisis eget. Fusce ultricies dui ut lacinia dignissim. Maecenas eget elit pellentesque, aliquam orci ut, venenatis mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tempor dignissim magna quis aliquam. Curabitur quis condimentum diam, sed pulvinar nunc. Integer lorem nibh, ornare dictum mauris at, aliquam ornare nibh. Maecenas suscipit eros at elit feugiat, nec sodales dui tincidunt. In convallis imperdiet finibus. Nam volutpat, lectus tincidunt euismod elementum, sem libero luctus diam, non ornare lacus urna eu odio. Suspendisse nisi lectus, rutrum et malesuada interdum, volutpat vel ligula. Fusce lobortis dignissim arcu, interdum ullamcorper erat ultrices quis. Cras diam mi, posuere eget felis ut, auctor tempor augue. Nunc non rutrum quam. Duis sed bibendum metus. Ut malesuada magna nulla, sed porttitor massa dapibus eget. Integer vel justo dui. Nam mollis ipsum justo, id fringilla elit facilisis eget. Fusce ultricies dui ut lacinia dignissim. Maecenas eget elit pellentesque, aliquam orci ut, venenatis mi. ",
+        locatie: "Prahova",
+        an: "2023",
+        galerie: ["assets/projects/gallerylocuintesociale/locuintesociale.png"]
+    },
+    {
+        id: 9,
+        titlu: "Bloc Locuințe Sociale 6",
+        cat: "Rezidențial",
+        img: "assets/projects/locuintesociale.png",
+        descriere: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tempor dignissim magna quis aliquam. Curabitur quis condimentum diam, sed pulvinar nunc. Integer lorem nibh, ornare dictum mauris at, aliquam ornare nibh. Maecenas suscipit eros at elit feugiat, nec sodales dui tincidunt. In convallis imperdiet finibus. Nam volutpat, lectus tincidunt euismod elementum, sem libero luctus diam, non ornare lacus urna eu odio. Suspendisse nisi lectus, rutrum et malesuada interdum, volutpat vel ligula. Fusce lobortis dignissim arcu, interdum ullamcorper erat ultrices quis. Cras diam mi, posuere eget felis ut, auctor tempor augue. Nunc non rutrum quam. Duis sed bibendum metus. Ut malesuada magna nulla, sed porttitor massa dapibus eget. Integer vel justo dui. Nam mollis ipsum justo, id fringilla elit facilisis eget. Fusce ultricies dui ut lacinia dignissim. Maecenas eget elit pellentesque, aliquam orci ut, venenatis mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tempor dignissim magna quis aliquam. Curabitur quis condimentum diam, sed pulvinar nunc. Integer lorem nibh, ornare dictum mauris at, aliquam ornare nibh. Maecenas suscipit eros at elit feugiat, nec sodales dui tincidunt. In convallis imperdiet finibus. Nam volutpat, lectus tincidunt euismod elementum, sem libero luctus diam, non ornare lacus urna eu odio. Suspendisse nisi lectus, rutrum et malesuada interdum, volutpat vel ligula. Fusce lobortis dignissim arcu, interdum ullamcorper erat ultrices quis. Cras diam mi, posuere eget felis ut, auctor tempor augue. Nunc non rutrum quam. Duis sed bibendum metus. Ut malesuada magna nulla, sed porttitor massa dapibus eget. Integer vel justo dui. Nam mollis ipsum justo, id fringilla elit facilisis eget. Fusce ultricies dui ut lacinia dignissim. Maecenas eget elit pellentesque, aliquam orci ut, venenatis mi. ",
+        locatie: "Prahova",
+        an: "2023",
+        galerie: ["assets/projects/gallerylocuintesociale/locuintesociale.png"]
+    },
+    {
+        id: 10,
+        titlu: "Bloc Locuințe Sociale 7",
+        cat: "Rezidențial",
+        img: "assets/projects/locuintesociale.png",
+        descriere: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tempor dignissim magna quis aliquam. Curabitur quis condimentum diam, sed pulvinar nunc. Integer lorem nibh, ornare dictum mauris at, aliquam ornare nibh. Maecenas suscipit eros at elit feugiat, nec sodales dui tincidunt. In convallis imperdiet finibus. Nam volutpat, lectus tincidunt euismod elementum, sem libero luctus diam, non ornare lacus urna eu odio. Suspendisse nisi lectus, rutrum et malesuada interdum, volutpat vel ligula. Fusce lobortis dignissim arcu, interdum ullamcorper erat ultrices quis. Cras diam mi, posuere eget felis ut, auctor tempor augue. Nunc non rutrum quam. Duis sed bibendum metus. Ut malesuada magna nulla, sed porttitor massa dapibus eget. Integer vel justo dui. Nam mollis ipsum justo, id fringilla elit facilisis eget. Fusce ultricies dui ut lacinia dignissim. Maecenas eget elit pellentesque, aliquam orci ut, venenatis mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tempor dignissim magna quis aliquam. Curabitur quis condimentum diam, sed pulvinar nunc. Integer lorem nibh, ornare dictum mauris at, aliquam ornare nibh. Maecenas suscipit eros at elit feugiat, nec sodales dui tincidunt. In convallis imperdiet finibus. Nam volutpat, lectus tincidunt euismod elementum, sem libero luctus diam, non ornare lacus urna eu odio. Suspendisse nisi lectus, rutrum et malesuada interdum, volutpat vel ligula. Fusce lobortis dignissim arcu, interdum ullamcorper erat ultrices quis. Cras diam mi, posuere eget felis ut, auctor tempor augue. Nunc non rutrum quam. Duis sed bibendum metus. Ut malesuada magna nulla, sed porttitor massa dapibus eget. Integer vel justo dui. Nam mollis ipsum justo, id fringilla elit facilisis eget. Fusce ultricies dui ut lacinia dignissim. Maecenas eget elit pellentesque, aliquam orci ut, venenatis mi. ",
+        locatie: "Prahova",
+        an: "2023",
+        galerie: ["assets/projects/gallerylocuintesociale/locuintesociale.png"]
+    },
+    {
+        id: 11,
+        titlu: "Bloc Locuințe Sociale 8",
+        cat: "Rezidențial",
+        img: "assets/projects/locuintesociale.png",
+        descriere: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tempor dignissim magna quis aliquam. Curabitur quis condimentum diam, sed pulvinar nunc. Integer lorem nibh, ornare dictum mauris at, aliquam ornare nibh. Maecenas suscipit eros at elit feugiat, nec sodales dui tincidunt. In convallis imperdiet finibus. Nam volutpat, lectus tincidunt euismod elementum, sem libero luctus diam, non ornare lacus urna eu odio. Suspendisse nisi lectus, rutrum et malesuada interdum, volutpat vel ligula. Fusce lobortis dignissim arcu, interdum ullamcorper erat ultrices quis. Cras diam mi, posuere eget felis ut, auctor tempor augue. Nunc non rutrum quam. Duis sed bibendum metus. Ut malesuada magna nulla, sed porttitor massa dapibus eget. Integer vel justo dui. Nam mollis ipsum justo, id fringilla elit facilisis eget. Fusce ultricies dui ut lacinia dignissim. Maecenas eget elit pellentesque, aliquam orci ut, venenatis mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tempor dignissim magna quis aliquam. Curabitur quis condimentum diam, sed pulvinar nunc. Integer lorem nibh, ornare dictum mauris at, aliquam ornare nibh. Maecenas suscipit eros at elit feugiat, nec sodales dui tincidunt. In convallis imperdiet finibus. Nam volutpat, lectus tincidunt euismod elementum, sem libero luctus diam, non ornare lacus urna eu odio. Suspendisse nisi lectus, rutrum et malesuada interdum, volutpat vel ligula. Fusce lobortis dignissim arcu, interdum ullamcorper erat ultrices quis. Cras diam mi, posuere eget felis ut, auctor tempor augue. Nunc non rutrum quam. Duis sed bibendum metus. Ut malesuada magna nulla, sed porttitor massa dapibus eget. Integer vel justo dui. Nam mollis ipsum justo, id fringilla elit facilisis eget. Fusce ultricies dui ut lacinia dignissim. Maecenas eget elit pellentesque, aliquam orci ut, venenatis mi. ",
+        locatie: "Prahova",
+        an: "2023",
+        galerie: ["assets/projects/gallerylocuintesociale/locuintesociale.png"]
+    }
 ];
 
 const serviciiDate = [
@@ -64,6 +133,42 @@ const serviciiDate = [
     {
         id: "s4",
         titlu: "Documentații Tehnice",
+        descriere: "DALI, DTAC, PT - toate fazele de proiectare și asistență tehnică pe șantier.",
+        imagine: "assets/services/documents.png"
+    },
+    {
+        id: "s5",
+        titlu: "Documentații Tehnice 2",
+        descriere: "DALI, DTAC, PT - toate fazele de proiectare și asistență tehnică pe șantier.",
+        imagine: "assets/services/documents.png"
+    },
+    {
+        id: "s6",
+        titlu: "Documentații Tehnice 3",
+        descriere: "DALI, DTAC, PT - toate fazele de proiectare și asistență tehnică pe șantier.",
+        imagine: "assets/services/documents.png"
+    },
+    {
+        id: "s7",
+        titlu: "Documentații Tehnice 4",
+        descriere: "DALI, DTAC, PT - toate fazele de proiectare și asistență tehnică pe șantier.",
+        imagine: "assets/services/documents.png"
+    },
+    {
+        id: "s8",
+        titlu: "Documentații Tehnice 5",
+        descriere: "DALI, DTAC, PT - toate fazele de proiectare și asistență tehnică pe șantier.",
+        imagine: "assets/services/documents.png"
+    },
+    {
+        id: "s9",
+        titlu: "Documentații Tehnice 6",
+        descriere: "DALI, DTAC, PT - toate fazele de proiectare și asistență tehnică pe șantier.",
+        imagine: "assets/services/documents.png"
+    },
+    {
+        id: "s10",
+        titlu: "Documentații Tehnice 7",
         descriere: "DALI, DTAC, PT - toate fazele de proiectare și asistență tehnică pe șantier.",
         imagine: "assets/services/documents.png"
     }
@@ -112,6 +217,86 @@ const echipaData = [
     },
     {
         nume: "Elena Constantinescu",
+        functie: "Project Manager",
+        imagine: "assets/team/default.png"
+    },
+    {
+        nume: "Elena Constantinescu 2",
+        functie: "Project Manager",
+        imagine: "assets/team/default.png"
+    },
+    {
+        nume: "Elena Constantinescu 3",
+        functie: "Project Manager",
+        imagine: "assets/team/default.png"
+    },
+    {
+        nume: "Elena Constantinescu 4",
+        functie: "Project Manager",
+        imagine: "assets/team/default.png"
+    },
+    {
+        nume: "Elena Constantinescu 5",
+        functie: "Project Manager",
+        imagine: "assets/team/default.png"
+    },
+    {
+        nume: "Elena Constantinescu 6",
+        functie: "Project Manager",
+        imagine: "assets/team/default.png"
+    },
+    {
+        nume: "Elena Constantinescu 7",
+        functie: "Project Manager",
+        imagine: "assets/team/default.png"
+    },
+    {
+        nume: "Elena Constantinescu 8",
+        functie: "Project Manager",
+        imagine: "assets/team/default.png"
+    },
+    {
+        nume: "Elena Constantinescu 9",
+        functie: "Project Manager",
+        imagine: "assets/team/default.png"
+    },
+    {
+        nume: "Elena Constantinescu 10",
+        functie: "Project Manager",
+        imagine: "assets/team/default.png"
+    },
+    {
+        nume: "Elena Constantinescu 11",
+        functie: "Project Manager",
+        imagine: "assets/team/default.png"
+    },
+    {
+        nume: "Elena Constantinescu 12",
+        functie: "Project Manager",
+        imagine: "assets/team/default.png"
+    },
+    {
+        nume: "Elena Constantinescu 13",
+        functie: "Project Manager",
+        imagine: "assets/team/default.png"
+    },
+    {
+        nume: "Elena Constantinescu 14",
+        functie: "Project Manager",
+        imagine: "assets/team/default.png"
+    },
+    {
+        nume: "Elena Constantinescu 15",
+        functie: "Project Manager",
+        imagine: "assets/team/default.png"
+    },
+    {
+        nume: "Elena Constantinescu 16",
+        functie: "Project Manager",
+        imagine: "assets/team/default.png"
+    },
+    {
+        nume: "Elena Constantinescu 17",
         functie: "Project Manager",
         imagine: "assets/team/default.png"
     }
