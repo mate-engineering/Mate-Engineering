@@ -114,9 +114,16 @@ section {
 section#projects,
 section#despre {
     display: block;
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding: 100px 7%;
     overflow-y: auto;
+    scrollbar-width: thin;
+    -webkit-overflow-scrolling: touch;
+}
+
+section {
+    height: 100vh;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
 }
 
 .despre-container {
@@ -876,8 +883,7 @@ section#despre {
 
     section#projects,
     section#despre {
-        padding-top: 80px;
-        padding-bottom: 80px;
+        padding: 80px 4%;
     }
 
     #home {
@@ -1192,42 +1198,42 @@ section#despre {
     }
 
     #contact {
-    position: relative;
-    padding: 100px 7%;
+        position: relative;
+        padding: 100px 7%;
     }
 
     .engineering-contact-wrap {
-    position: relative;
-    z-index: 5;
-    display: flex;
-    flex-direction: column;
-    gap: 60px;
-}
+        position: relative;
+        z-index: 5;
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+    }
 
     .giant-title {
-    font-size: clamp(2.5rem, 8vw, 6rem);
-    font-weight: 900;
-    line-height: 0.9;
-    margin-top: 5px;
-}
+        font-size: clamp(2.5rem, 8vw, 6rem);
+        font-weight: 900;
+        line-height: 0.9;
+        margin-top: 5px;
+    }
 
     .giant-title .outline {
-    -webkit-text-stroke: 2px var(--text);
-    color: transparent;
-}
+        -webkit-text-stroke: 2px var(--text);
+        color: transparent;
+    }
 
 
     .blueprint-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-    max-width: 1000px;
-}
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        max-width: 1000px;
+    }
 
     .info-node {
-    position: relative;
-    padding-left: 15px;
-}
+        position: relative;
+        padding-left: 15px;
+    }
 
     .node-content label {
         font-size: 0.6rem;
@@ -1355,8 +1361,18 @@ section#despre {
 
     section#projects,
     section#despre {
-        padding-top: 60px;
-        padding-bottom: 60px;
+        display: flex;
+        flex-direction: column;
+        padding: 100px 7%;
+        overflow: hidden;
+    }
+
+    #despre .despre-container,
+    #despre .team-section,
+    #projects .projects-container,
+    #projects .pagination-controls {
+        overflow-y: visible;
+        flex-shrink: 0;
     }
 
     .projects-container {
@@ -1415,5 +1431,75 @@ section#despre {
         opacity: 0.1;
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
+    }
+}
+
+#echipa {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 100px 7%;
+    height: 100vh;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    position: relative;
+    background-image: linear-gradient(var(--grid) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+    background-size: 60px 60px;
+    overflow: hidden;
+}
+
+#echipa .team-section {
+    margin-top: 0;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#echipa .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+@media (max-width: 991px) {
+    #echipa {
+        padding: 80px 5%;
+    }
+
+    #echipa .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+}
+
+@media (max-width: 767px) {
+    #echipa {
+        padding: 60px 4%;
+    }
+
+    #echipa .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    #echipa .team-grid {
+        grid-template-columns: 1fr;
+        max-width: 300px;
+        margin: 30px auto 0;
+    }
+}
+
+@media (max-height: 500px) and (orientation: landscape) {
+    #echipa {
+        padding: 50px 4%;
+    }
+
+    #echipa .team-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
     }
 }
