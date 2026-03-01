@@ -2,7 +2,7 @@ import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
-const modelPaths = ['assets/models/house.glb'];
+const modelPaths = ['assets/models/appartament.glb', 'assets/models/house.glb'];
 let currentIdx = 0;
 let isTransitioning = false;
 const container = document.getElementById('canvas-container');
