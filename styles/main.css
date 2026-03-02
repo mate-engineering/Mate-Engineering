@@ -7,6 +7,8 @@
     --p-transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     --header-padding: 25px 7%;
     --section-padding: 100px 7%;
+    --safe-bottom: env(safe-area-inset-bottom, 20px);
+    --safe-top: env(safe-area-inset-top, 20px);
 }
 
 [data-theme="dark"] {
@@ -140,6 +142,10 @@ section#despre,
     margin-left: 0;
     margin-right: auto;
     text-align: left;
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
 }
 
 .despre-container {
@@ -226,6 +232,8 @@ section#despre,
     text-transform: uppercase;
     letter-spacing: -2px;
     margin: 0 0 15px 0;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .content h1 .outline {
@@ -234,6 +242,8 @@ section#despre,
     display: block;
     margin-top: 5px;
     font-size: clamp(1.8rem, 4.5vw, 3.5rem);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .content p {
@@ -242,6 +252,9 @@ section#despre,
     opacity: 0.8;
     max-width: 100%;
     width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
 }
 
 .content button {
@@ -260,6 +273,7 @@ section#despre,
     display: inline-block;
     white-space: nowrap;
     text-align: center;
+    max-width: 100%;
 }
 
 .service-card,
@@ -271,6 +285,8 @@ section#despre,
     background: var(--card-bg);
     border: 1px solid var(--grid);
     transition: var(--p-transition);
+    width: 100%;
+    overflow: hidden;
 }
 
 .service-card {
@@ -294,6 +310,7 @@ section#despre,
     aspect-ratio: 16/9;
     overflow: hidden;
     border-bottom: 1px solid var(--grid);
+    flex-shrink: 0;
 }
 
 .service-img,
@@ -318,18 +335,24 @@ section#despre,
     flex: 1;
     display: flex;
     flex-direction: column;
+    min-width: 0;
+    width: 100%;
 }
 
 .service-card h3,
 .project-card h3,
 .team-card h4 {
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 1.2vw, 1.2rem);
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: -0.5px;
     margin-bottom: 10px;
     position: relative;
     display: inline-block;
+    width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
 }
 
 .service-card h3::after,
@@ -355,11 +378,20 @@ section#despre,
 .project-card .project-desc,
 .team-card p {
     font-family: 'Inter', sans-serif;
-    font-size: 0.9rem;
+    font-size: clamp(0.8rem, 0.9vw, 0.9rem);
     line-height: 1.5;
     opacity: 0.7;
     margin: 5px 0 0 0;
     flex: 1;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    max-width: 100%;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .services-grid {
@@ -392,9 +424,12 @@ section#despre,
 
 .despre-text {
     font-family: 'Inter', sans-serif;
-    font-size: 1.1rem;
+    font-size: clamp(0.95rem, 1.1vw, 1.1rem);
     line-height: 1.8;
     opacity: 0.8;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
 }
 
 .despre-image {
@@ -420,7 +455,7 @@ section#despre,
 }
 
 .team-title {
-    font-size: 1.8rem;
+    font-size: clamp(1.5rem, 1.8vw, 1.8rem);
     text-transform: uppercase;
     font-weight: 800;
     margin-bottom: 40px;
@@ -466,17 +501,21 @@ section#despre,
 }
 
 .team-card h4 {
-    font-size: 1rem;
+    font-size: clamp(0.9rem, 1rem, 1rem);
     font-weight: 800;
     text-transform: uppercase;
     margin-bottom: 5px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
 }
 
 .team-card p {
-    font-size: 0.8rem;
+    font-size: clamp(0.75rem, 0.8rem, 0.8rem);
     opacity: 0.6;
     text-transform: uppercase;
     letter-spacing: 1px;
+    -webkit-line-clamp: 2;
 }
 
 .projects-container {
@@ -508,6 +547,7 @@ section#despre,
     overflow: hidden;
     background: #222;
     border-bottom: 1px solid var(--grid);
+    flex-shrink: 0;
 }
 
 .img-box img {
@@ -536,13 +576,18 @@ section#despre,
     text-transform: uppercase;
     opacity: 0.5;
     letter-spacing: 1px;
+    display: block;
+    margin-bottom: 5px;
 }
 
 .project-meta h3 {
-    font-size: 0.9rem;
+    font-size: clamp(0.85rem, 0.9rem, 0.9rem);
     text-transform: uppercase;
     font-weight: 800;
     margin-top: 5px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
 }
 
 .pagination-controls {
@@ -595,6 +640,8 @@ section#despre,
     font-weight: 900;
     line-height: 1;
     text-transform: uppercase;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 #contact .giant-title .outline {
@@ -619,6 +666,7 @@ section#despre,
     position: relative;
     padding: 0px 0 10px 0;
     border-bottom: 1px dashed var(--grid);
+    width: 100%;
 }
 
 .dim-line {
@@ -659,6 +707,8 @@ section#despre,
     word-break: break-word;
     opacity: 0.9;
     margin: 0;
+    overflow-wrap: break-word;
+    hyphens: auto;
 }
 
 .social-tech-bar {
@@ -691,6 +741,7 @@ section#despre,
     text-transform: uppercase;
     font-size: 0.75rem;
     letter-spacing: 0.5px;
+    white-space: nowrap;
 }
 
 .contact-form-column {
@@ -715,6 +766,7 @@ section#despre,
     font-size: 1rem;
     transition: var(--p-transition);
     border-radius: 0;
+    box-sizing: border-box;
 }
 
 .form-group input:focus,
@@ -742,93 +794,12 @@ section#despre,
     transition: 0.3s;
     width: 100%;
     text-align: center;
+    box-sizing: border-box;
 }
 
 .submit-btn:hover {
     background: transparent;
     color: var(--text);
-}
-
-@media (max-width: 991px) {
-    #contact .engineering-contact-wrap {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-
-    .contact-info-column {
-        order: 1;
-    }
-
-    .contact-form-column {
-        order: 2;
-    }
-}
-
-@media (max-width: 767px) {
-    #contact .giant-title {
-        font-size: 2.8rem;
-        text-align: left;
-    }
-
-    .blueprint-grid {
-        gap: 20px;
-    }
-
-    .node-content p {
-        font-size: 1.1rem;
-    }
-
-    .social-tech-bar {
-        gap: 15px;
-        justify-content: flex-start;
-    }
-
-    .social-tech-bar a {
-        background: var(--card-bg);
-        padding: 8px 16px;
-        border-radius: 30px;
-        border: 1px solid var(--grid);
-    }
-
-    .form-group input,
-    .form-group textarea {
-        padding: 14px 18px;
-        font-size: 0.95rem;
-    }
-
-    .submit-btn {
-        padding: 14px 25px;
-    }
-}
-
-@media (max-width: 480px) {
-    #contact .giant-title {
-        font-size: 2.2rem;
-    }
-
-    .node-content p {
-        font-size: 1rem;
-    }
-
-    .social-tech-bar a span {
-        font-size: 0.7rem;
-    }
-
-    .social-tech-bar a i {
-        font-size: 1rem;
-    }
-}
-
-.giant-title {
-    font-size: clamp(3rem, 10vw, 8rem);
-    font-weight: 900;
-    line-height: 0.8;
-    margin-top: 10px;
-}
-
-.giant-title .outline {
-    -webkit-text-stroke: 2px var(--text);
-    color: transparent;
 }
 
 @media (min-width: 1400px) {
@@ -848,6 +819,12 @@ section#despre,
     .content h1 .outline {
         font-size: 3.5rem;
     }
+    
+    .service-desc,
+    .project-card .project-desc,
+    .team-card p {
+        -webkit-line-clamp: 4;
+    }
 }
 
 @media (min-width: 1200px) and (max-width: 1399px) {
@@ -861,6 +838,12 @@ section#despre,
 
     .content h1 .outline {
         font-size: 3rem;
+    }
+    
+    .service-desc,
+    .project-card .project-desc,
+    .team-card p {
+        -webkit-line-clamp: 4;
     }
 }
 
@@ -893,6 +876,12 @@ section#despre,
 
     .services-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .service-desc,
+    .project-card .project-desc,
+    .team-card p {
+        -webkit-line-clamp: 3;
     }
 }
 
@@ -982,6 +971,12 @@ section#despre,
 
     .giant-title {
         font-size: 8vw;
+    }
+    
+    .service-desc,
+    .project-card .project-desc,
+    .team-card p {
+        -webkit-line-clamp: 3;
     }
 }
 
@@ -1139,6 +1134,7 @@ section#despre,
         white-space: normal;
         width: auto;
         min-width: 200px;
+        word-wrap: break-word;
     }
 
     .watermark {
@@ -1153,6 +1149,17 @@ section#despre,
         display: none !important;
     }
 
+    #servicii,
+    #echipa,
+    #projects {
+        display: flex;
+        flex-direction: column;
+        justify-content: center !important;
+        min-height: 100vh;
+        padding-top: 80px !important;
+        padding-bottom: 80px !important;
+    }
+
     #servicii .services-grid,
     #echipa .team-grid,
     #projects .projects-container {
@@ -1161,13 +1168,14 @@ section#despre,
         overflow-y: hidden !important;
         scroll-snap-type: x mandatory !important;
         gap: 15px !important;
-        padding: 10px 4% 20px !important;
-        margin: 0 !important;
+        padding: 20px 4% 20px !important;
+        margin: 20px 0 !important;
         width: 100% !important;
         scrollbar-width: none !important;
         -webkit-overflow-scrolling: touch !important;
         cursor: grab !important;
         flex-wrap: nowrap !important;
+        scroll-padding: 0 4%;
     }
 
     #servicii .services-grid::-webkit-scrollbar,
@@ -1178,24 +1186,26 @@ section#despre,
 
     #servicii .service-card {
         flex: 0 0 280px !important;
-        scroll-snap-align: start !important;
+        scroll-snap-align: center !important;
         height: fit-content !important;
-        max-height: 360px !important;
+        max-height: 380px !important;
         display: flex !important;
         flex-direction: column !important;
         opacity: 1 !important;
         transform: none !important;
+        margin: 0 !important;
     }
 
     #echipa .team-card {
         flex: 0 0 260px !important;
-        scroll-snap-align: start !important;
+        scroll-snap-align: center !important;
         height: fit-content !important;
         min-height: 340px !important;
         display: flex !important;
         flex-direction: column !important;
         opacity: 1 !important;
         transform: none !important;
+        margin: 0 !important;
     }
 
     #echipa .team-img {
@@ -1211,27 +1221,37 @@ section#despre,
         flex: 1 !important;
         display: flex !important;
         flex-direction: column !important;
+        min-width: 0 !important;
     }
 
     #echipa .team-card h4 {
         font-size: 1.1rem !important;
         margin-bottom: 5px !important;
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+        hyphens: auto !important;
     }
 
     #echipa .team-card p {
         font-size: 0.85rem !important;
         margin-top: 5px !important;
+        -webkit-line-clamp: 2 !important;
+        display: -webkit-box !important;
+        -webkit-box-orient: vertical !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
     }
 
     #projects .project-card {
         flex: 0 0 320px !important;
-        scroll-snap-align: start !important;
+        scroll-snap-align: center !important;
         height: fit-content !important;
-        max-height: 380px !important;
+        max-height: 400px !important;
         display: flex !important;
         flex-direction: column !important;
         opacity: 1 !important;
         transform: none !important;
+        margin: 0 !important;
     }
 
     #projects .img-box {
@@ -1243,18 +1263,59 @@ section#despre,
     #projects .project-meta {
         padding: 15px !important;
         flex: 1 !important;
+        min-width: 0 !important;
+    }
+
+    #projects .project-meta span {
+        font-size: 0.6rem !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
     }
 
     #projects .project-meta h3 {
         font-size: 1rem !important;
         margin-bottom: 5px !important;
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+        hyphens: auto !important;
+    }
+
+    #projects .project-desc {
+        -webkit-line-clamp: 2 !important;
+        display: -webkit-box !important;
+        -webkit-box-orient: vertical !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        font-size: 0.85rem !important;
+    }
+
+    .service-content {
+        padding: 15px !important;
+        min-width: 0 !important;
+    }
+
+    .service-card h3 {
+        font-size: 1.1rem !important;
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+        hyphens: auto !important;
+    }
+
+    .service-desc {
+        -webkit-line-clamp: 2 !important;
+        display: -webkit-box !important;
+        -webkit-box-orient: vertical !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        font-size: 0.85rem !important;
     }
 
     .scroll-indicator {
         display: flex !important;
         justify-content: center !important;
         gap: 8px !important;
-        margin: 15px 0 5px !important;
+        margin: 20px 0 10px !important;
         padding: 0 4% !important;
         width: 100% !important;
         position: relative !important;
@@ -1278,7 +1339,7 @@ section#despre,
     }
 
     section#contact {
-        padding-bottom: max(120px, env(safe-area-inset-bottom, 20px) + 100px) !important;
+        padding-bottom: max(120px, var(--safe-bottom) + 100px) !important;
         margin-bottom: 0;
         min-height: 100vh;
         height: auto;
@@ -1469,14 +1530,21 @@ section#despre,
 
     #servicii .service-card {
         flex: 0 0 260px !important;
+        max-height: 360px !important;
     }
 
     #echipa .team-card {
         flex: 0 0 240px !important;
+        min-height: 320px !important;
+    }
+
+    #echipa .team-img {
+        height: 240px !important;
     }
 
     #projects .project-card {
         flex: 0 0 280px !important;
+        max-height: 380px !important;
     }
 
     #contact .giant-title {
@@ -1501,6 +1569,12 @@ section#despre,
     .form-group textarea {
         padding: 12px 14px;
         font-size: 0.9rem;
+    }
+    
+    .service-desc,
+    .project-card .project-desc,
+    .team-card p {
+        -webkit-line-clamp: 2 !important;
     }
 }
 
@@ -1556,14 +1630,21 @@ section#despre,
 
     #servicii .service-card {
         flex: 0 0 240px !important;
+        max-height: 340px !important;
     }
 
     #echipa .team-card {
         flex: 0 0 220px !important;
+        min-height: 300px !important;
+    }
+    
+    #echipa .team-img {
+        height: 220px !important;
     }
 
     #projects .project-card {
         flex: 0 0 260px !important;
+        max-height: 360px !important;
     }
 
     #contact .giant-title {
@@ -1640,19 +1721,28 @@ section#despre,
 
     #servicii .service-card {
         flex: 0 0 240px !important;
+        max-height: 320px !important;
     }
 
     #echipa .team-card {
         flex: 0 0 220px !important;
+        min-height: 280px !important;
     }
 
     #projects .project-card {
         flex: 0 0 260px !important;
+        max-height: 340px !important;
     }
 
     nav {
         bottom: 10px;
         padding: 6px 12px;
+    }
+    
+    .service-desc,
+    .project-card .project-desc,
+    .team-card p {
+        -webkit-line-clamp: 2 !important;
     }
 }
 
@@ -1664,6 +1754,12 @@ section#despre,
     nav {
         -webkit-backdrop-filter: blur(20px);
         backdrop-filter: blur(20px);
+    }
+    
+    @media (max-width: 767px) {
+        section#contact {
+            padding-bottom: max(120px, env(safe-area-inset-bottom, 20px) + 100px) !important;
+        }
     }
 }
 
@@ -1677,7 +1773,6 @@ section#despre,
 
 @media (-webkit-min-device-pixel-ratio: 2),
 (min-resolution: 192dpi) {
-
     .service-img,
     .project-card img,
     .team-img,
@@ -1724,3 +1819,4 @@ section#despre,
 #projects .projects-container.dragging {
     scroll-behavior: auto;
 }
+
