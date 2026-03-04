@@ -170,20 +170,18 @@
                     </div>
                 </div>
 
-                <div class="contact-form-column reveal">
-                    <form id="contact-form" action="https://bitter-snow-561d.mate-expertise.workers.dev/" method="POST">
-                        <div class="form-group">
-                            <input type="text" name="name" placeholder="Numele tău" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" name="email" placeholder="Email" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea name="message" rows="5" placeholder="Mesajul tău..." required></textarea>
-                        </div>
-                        <button type="submit" class="submit-btn">Trimite Mesaj</button>
-                    </form>
-                </div>
+                <form id="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Numele tău" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" placeholder="Mesajul tău..." required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn" id="submit-button">Trimite Mesaj</button>
+                </form>
             </div>
         </section>
     </div>
@@ -191,37 +189,6 @@
     <script src="js/data.js"></script>
     <script type="module" src="js/3d-model.js"></script>
     <script src="js/main.js"></script>
-    <script>
-        document.getElementById('contact-form').addEventListener('submit', async function (e) {
-            e.preventDefault();
-
-            const form = e.target;
-            const btn = form.querySelector('button');
-            const originalText = btn.textContent;
-
-            btn.textContent = 'Se trimite...';
-            btn.disabled = true;
-
-            try {
-                const response = await fetch(form.action, {
-                    method: 'POST',
-                    body: new FormData(form)
-                });
-
-                if (response.ok) {
-                    alert(' Mesaj trimis cu succes!');
-                    form.reset();
-                } else {
-                    throw new Error('Eroare');
-                }
-            } catch (error) {
-                alert('A aparut o eroare. Incearca din nou.');
-            } finally {
-                btn.textContent = originalText;
-                btn.disabled = false;
-            }
-        });
-    </script>
 </body>
 
 </html>

@@ -388,14 +388,14 @@ function handleResize() {
         afiseazaCaruselServicii();
         afiseazaCaruselEchipa();
         afiseazaCaruselProiecte();
-        
+
         const paginari = document.querySelectorAll('.pagination-controls');
         paginari.forEach(p => p.style.display = 'none');
     } else {
         afiseazaServiciiPagina(paginaCurentaServicii);
         afiseazaPagina(paginaCurenta);
         afiseazaEchipaPagina(paginaCurentaEchipa);
-        
+
         const paginari = document.querySelectorAll('.pagination-controls');
         paginari.forEach(p => p.style.display = 'flex');
     }
@@ -431,7 +431,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function setupCarouselDrag() {
     const carousels = ['.services-grid', '.team-grid', '.projects-container'];
-    
+
     carousels.forEach(selector => {
         const container = document.querySelector(selector);
         if (!container) return;
@@ -489,4 +489,42 @@ function setupCarouselDrag() {
 
 window.addEventListener('resize', () => {
     handleResize();
+});
+document.getElementById('contact-form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const btn = document.getElementById('submit-button');
+    const formData = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        message: document.getElementById('message').value
+    };
+
+    btn.innerText = 'Se trimite...';
+    btn.disabled = true;
+
+    try {
+
+        const response = await fetch('https://bitter-snow-561d.mate-expertise.workers.dev', {
+            method: 'POST',
+            mode: 'cors',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(formData)
+        });
+
+        if (response.ok) {
+            alert('Mesaj trimis cu succes! Vei primi un mail de confirmare în Outlook.');
+            e.target.reset();
+        } else {
+            const errorData = await response.json();
+            console.error('Eroare Worker:', errorData);
+            throw new Error('Eroare la server');
+        }
+    } catch (error) {
+        console.error('Eroare Fetch:', error);
+        alert('Ups! Ceva n-a mers. Încearcă din nou.');
+    } finally {
+        btn.innerText = 'Trimite Mesaj';
+        btn.disabled = false;
+    }
 });
