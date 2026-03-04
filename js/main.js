@@ -1,10 +1,11 @@
-const proiectePePagina = 10;
+
+const proiectePePagina = 8;
 let paginaCurenta = 1;
 
-const serviciiPePagina = 6;
+const serviciiPePagina = 8;
 let paginaCurentaServicii = 1;
 
-const echipaPePagina = 4;
+const echipaPePagina = 5;
 let paginaCurentaEchipa = 1;
 
 document.getElementById("theme-toggle").onclick = () => {
@@ -35,9 +36,9 @@ function afiseazaPagina(pagina) {
         const card = document.createElement('div');
         card.className = "project-card";
         card.innerHTML = `
-            <div class="img-box"><img src="${p.img}" loading="lazy"></div>
+            <div class="img-box"><img src="${p.img}" loading="lazy" alt="${p.titlu}"></div>
             <div class="project-meta">
-                <span>${p.cat}</span>
+                <span>${p.cat || 'Proiect'}</span>
                 <h3>${p.titlu}</h3>
             </div>
         `;
@@ -86,9 +87,10 @@ function afiseazaServiciiPagina(pagina) {
             </div>
             <div class="service-content">
                 <h3>${serviciu.titlu}</h3>
-                <p class="service-desc">${serviciu.descriere}</p>
+                <p class="service-desc">${serviciu.descriereScurta}</p>
             </div>
         `;
+        card.onclick = () => window.location.href = `serviciu.html?id=${serviciu.id}`;
         grid.appendChild(card);
         setTimeout(() => card.classList.add('show'), index * 100);
     });
@@ -200,6 +202,7 @@ function afiseazaCaruselServicii() {
                 <p class="service-desc">${serviciu.descriere}</p>
             </div>
         `;
+        card.onclick = () => window.location.href = `serviciu.html?id=${serviciu.id}`;
         grid.appendChild(card);
     });
 
@@ -238,9 +241,9 @@ function afiseazaCaruselProiecte() {
         const card = document.createElement('div');
         card.className = "project-card";
         card.innerHTML = `
-            <div class="img-box"><img src="${p.img}" loading="lazy"></div>
+            <div class="img-box"><img src="${p.img}" loading="lazy" alt="${p.titlu}"></div>
             <div class="project-meta">
-                <span>${p.cat}</span>
+                <span>${p.cat || 'Proiect'}</span>
                 <h3>${p.titlu}</h3>
             </div>
         `;
@@ -252,44 +255,48 @@ function afiseazaCaruselProiecte() {
 }
 
 function incarcaDateFirma() {
-    const descEl = document.getElementById('descriere-firma');
-    if (descEl) descEl.textContent = firmaData.descriere;
+    if (typeof firmaData !== 'undefined') {
+        const descEl = document.getElementById('descriere-firma');
+        if (descEl) descEl.textContent = firmaData.descriere || "Suntem o echipă de ingineri pasionați, dedicați inovației și excelenței tehnice. Cu peste 10 ani de experiență în industrie, oferim soluții personalizate pentru provocări tehnice complexe.";
 
-    const adresaEl = document.getElementById('contact-adresa');
-    if (adresaEl) adresaEl.textContent = firmaData.adresa;
+        const adresaEl = document.getElementById('contact-adresa');
+        if (adresaEl) adresaEl.textContent = firmaData.adresa || "Strada Ingineriei 123, București";
 
-    const telefonEl = document.getElementById('contact-telefon');
-    if (telefonEl) telefonEl.textContent = firmaData.telefon;
+        const telefonEl = document.getElementById('contact-telefon');
+        if (telefonEl) telefonEl.textContent = firmaData.telefon || "+40 123 456 789";
 
-    const emailEl = document.getElementById('contact-email');
-    if (emailEl) emailEl.textContent = firmaData.email;
+        const emailEl = document.getElementById('contact-email');
+        if (emailEl) emailEl.textContent = firmaData.email || "office@mate-engineering.ro";
+    }
 }
 
 function loadContact() {
-    if (document.getElementById('contact-adresa'))
-        document.getElementById('contact-adresa').innerText = firmaData.adresa;
-    if (document.getElementById('contact-email'))
-        document.getElementById('contact-email').innerText = firmaData.email;
-    if (document.getElementById('contact-telefon'))
-        document.getElementById('contact-telefon').innerText = firmaData.telefon;
+    if (typeof firmaData !== 'undefined') {
+        if (document.getElementById('contact-adresa'))
+            document.getElementById('contact-adresa').innerText = firmaData.adresa || "Strada Ingineriei 123, București";
+        if (document.getElementById('contact-email'))
+            document.getElementById('contact-email').innerText = firmaData.email || "office@mate-engineering.ro";
+        if (document.getElementById('contact-telefon'))
+            document.getElementById('contact-telefon').innerText = firmaData.telefon || "+40 123 456 789";
 
-    const socialContainer = document.getElementById('social-links');
-    if (socialContainer) {
-        socialContainer.innerHTML = '';
+        const socialContainer = document.getElementById('social-links');
+        if (socialContainer && firmaData.social) {
+            socialContainer.innerHTML = '';
 
-        firmaData.social.forEach(platforma => {
-            const link = document.createElement('a');
-            link.href = platforma.link;
-            link.target = "_blank";
-            link.rel = "noopener noreferrer";
+            firmaData.social.forEach(platforma => {
+                const link = document.createElement('a');
+                link.href = platforma.link;
+                link.target = "_blank";
+                link.rel = "noopener noreferrer";
 
-            link.innerHTML = `
-                <i class="${platforma.icon}"></i>
-                <span>${platforma.nume}</span>
-            `;
+                link.innerHTML = `
+                    <i class="${platforma.icon}"></i>
+                    <span>${platforma.nume}</span>
+                `;
 
-            socialContainer.appendChild(link);
-        });
+                socialContainer.appendChild(link);
+            });
+        }
     }
 }
 
@@ -332,10 +339,13 @@ function updateScrollDots(sectionId) {
 
     if (!container || !indicator || container.children.length === 0) return;
 
-    const cardWidth = container.children[0].clientWidth || 280;
-    const gap = 15;
-    const visibleCards = Math.floor(container.clientWidth / (cardWidth + gap));
-    const totalDots = Math.max(1, container.children.length - visibleCards + 1);
+    indicator.style.position = 'relative';
+    indicator.style.bottom = 'auto';
+    indicator.style.marginTop = '10px';
+
+    const cardWidth = container.children[0].clientWidth || 260;
+    const gap = 12;
+    const totalDots = container.children.length;
 
     indicator.innerHTML = '';
     for (let i = 0; i < totalDots; i++) {
@@ -370,7 +380,7 @@ function updateScrollDots(sectionId) {
     };
 
     container.removeEventListener('scroll', onScroll);
-    container.addEventListener('scroll', onScroll);
+    container.addEventListener('scroll', onScroll, { passive: true });
 }
 
 function handleResize() {
@@ -378,10 +388,16 @@ function handleResize() {
         afiseazaCaruselServicii();
         afiseazaCaruselEchipa();
         afiseazaCaruselProiecte();
+        
+        const paginari = document.querySelectorAll('.pagination-controls');
+        paginari.forEach(p => p.style.display = 'none');
     } else {
         afiseazaServiciiPagina(paginaCurentaServicii);
         afiseazaPagina(paginaCurenta);
         afiseazaEchipaPagina(paginaCurentaEchipa);
+        
+        const paginari = document.querySelectorAll('.pagination-controls');
+        paginari.forEach(p => p.style.display = 'flex');
     }
 }
 
@@ -396,9 +412,11 @@ document.addEventListener('DOMContentLoaded', () => {
         link.addEventListener('click', function (e) {
             e.preventDefault();
             const onclickAttr = this.getAttribute('onclick');
-            const match = onclickAttr.match(/'#([^']+)'/);
-            if (match && match[1]) {
-                scrollToSection(match[1]);
+            if (onclickAttr) {
+                const match = onclickAttr.match(/'#([^']+)'/);
+                if (match && match[1]) {
+                    scrollToSection(match[1]);
+                }
             }
         });
     });
@@ -407,7 +425,67 @@ document.addEventListener('DOMContentLoaded', () => {
     if (snapContainer) {
         snapContainer.style.webkitOverflowScrolling = 'touch';
     }
+
+    setupCarouselDrag();
 });
+
+function setupCarouselDrag() {
+    const carousels = ['.services-grid', '.team-grid', '.projects-container'];
+    
+    carousels.forEach(selector => {
+        const container = document.querySelector(selector);
+        if (!container) return;
+
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        container.addEventListener('mousedown', (e) => {
+            if (window.innerWidth > 767) return;
+            isDown = true;
+            container.classList.add('dragging');
+            startX = e.pageX - container.offsetLeft;
+            scrollLeft = container.scrollLeft;
+        });
+
+        container.addEventListener('mouseleave', () => {
+            isDown = false;
+            container.classList.remove('dragging');
+        });
+
+        container.addEventListener('mouseup', () => {
+            isDown = false;
+            container.classList.remove('dragging');
+        });
+
+        container.addEventListener('mousemove', (e) => {
+            if (!isDown || window.innerWidth > 767) return;
+            e.preventDefault();
+            const x = e.pageX - container.offsetLeft;
+            const walk = (x - startX) * 2;
+            container.scrollLeft = scrollLeft - walk;
+        });
+
+        container.addEventListener('touchstart', (e) => {
+            if (window.innerWidth > 767) return;
+            isDown = true;
+            startX = e.touches[0].pageX - container.offsetLeft;
+            scrollLeft = container.scrollLeft;
+        });
+
+        container.addEventListener('touchend', () => {
+            isDown = false;
+        });
+
+        container.addEventListener('touchmove', (e) => {
+            if (!isDown || window.innerWidth > 767) return;
+            e.preventDefault();
+            const x = e.touches[0].pageX - container.offsetLeft;
+            const walk = (x - startX) * 2;
+            container.scrollLeft = scrollLeft - walk;
+        }, { passive: false });
+    });
+}
 
 window.addEventListener('resize', () => {
     handleResize();

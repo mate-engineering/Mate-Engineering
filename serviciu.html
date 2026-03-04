@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mate Engineering - Serviciu</title>
+    <link rel="icon" type="image/png" href="assets/title logo.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles/proiect.css">
+    <link rel="stylesheet" href="styles/serviciu.css">
+    
+    <script src="js/theme.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+</head>
+<body class="math-bg">
+    <div class="watermark">Serviciu</div>
+    <a href="index.html#servicii" class="back-btn">← Servicii</a>
+    
+    <main id="content">
+
+        <div class="detail-header desktop-only">
+            <h1 class="detail-title reveal" id="service-title-desktop"></h1>
+        </div>
+
+        <div class="main-container">
+
+            <div class="detail-hero-img reveal">
+                <img src="" alt="" id="service-image">
+            </div>
+            
+            <div class="detail-sidebar reveal">
+
+                <h1 class="project-title-mobile mobile-only" id="service-title-mobile"></h1>
+                
+                <div class="service-category" id="service-category"></div>
+                
+                <div class="desc-text" id="service-description"></div>
+                
+                <div class="specs" id="service-specs"></div>
+            </div>
+        </div>
+
+        <section class="section-block bg-card" id="caracteristici-section" style="display: none;">
+            <div class="section-container">
+                <h3 class="section-title reveal">Caracteristici principale</h3>
+                <div class="grid-auto" id="caracteristici-list"></div>
+            </div>
+        </section>
+
+        <section class="section-block bg-dark" id="tehnologii-section" style="display: none;">
+            <div class="section-container">
+                <h3 class="section-title reveal text-white">Tehnologii & Software</h3>
+                <div class="tech-tags" id="tehnologii-list"></div>
+            </div>
+        </section>
+
+        <section class="section-block" id="proces-section" style="display: none;">
+            <div class="section-container">
+                <h3 class="section-title reveal">Procesul de lucru</h3>
+                <div class="process-steps" id="proces-list"></div>
+            </div>
+        </section>
+
+        <section class="section-block bg-card" id="beneficii-section" style="display: none;">
+            <div class="section-container">
+                <h3 class="section-title reveal">Beneficii</h3>
+                <div class="grid-auto-sm" id="beneficii-list"></div>
+            </div>
+        </section>
+
+        <section class="gallery-section" id="galerie-section" style="display: none;">
+            <div class="section-container">
+                <h3 class="reveal">Galerie proiecte relevante</h3>
+                
+                <div class="gallery-nav" id="nav-arrows">
+                    <button class="nav-arrow" onclick="moveGallery(-1)">←</button>
+                    <button class="nav-arrow" onclick="moveGallery(1)">→</button>
+                </div>
+
+                <div class="carousel-container reveal" id="carousel"></div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="section-container text-center">
+                <h3 class="cta-title reveal">Interesat de acest serviciu?</h3>
+                <p class="cta-text reveal">Contactează-ne pentru o consultație</p>
+                <button class="cta-button" onclick="window.location.href='index.html#contact'">
+                    Solicită o ofertă
+                </button>
+            </div>
+        </section>
+    </main>
+    
+    <div id="lightbox" onclick="this.style.display='none'">
+        <img src="" id="lb-img">
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/serviciu.js"></script>
+</body>
+</html>
